@@ -24,11 +24,11 @@ dates_times <- strptime(dates_times, "%d/%m/%Y %H:%M:%S")
 dev.new()
 par(mfrow = c(2,2), bg = "white")
 
-plot(dates_times, power_consumption$Global_active_power, "solid", ylab = "Global Active Power")
+plot(dates_times, power_consumption$Global_active_power, "solid", ylab = "Global Active Power", xlab = "")
 
-plot(dates_times, power_consumption$Global_active_power, "solid", ylab = "Voltage", xlab = "datetime")
+plot(dates_times, power_consumption$Voltage, "solid", ylab = "Voltage", xlab = "datetime")
 
-plot(dates_times, power_consumption$Sub_metering_1, "solid", ylab = "Energy sub metering")
+plot(dates_times, power_consumption$Sub_metering_1, "solid", ylab = "Energy sub metering", xlab = "")
 lines(dates_times, power_consumption$Sub_metering_2, "solid", col = "red")
 lines(dates_times, power_consumption$Sub_metering_3, "solid", col = "blue")
 legend("topright", lty =  c(1,1,1), col = c("black", "red", "blue"), legend = c("Sub metering_1", "Sub metering_2", "Sub metering_3"))
